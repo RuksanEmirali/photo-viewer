@@ -1,8 +1,9 @@
-.pic {
+.focus-img {
     direction: flex;
     flex-direction: row;
-    align-items: center;
-    justify-items: stretch;
+    align-content: stretch;
 }
 
-
+#large-pic {
+    max-width: inherit;
+}

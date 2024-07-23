@@ -8,10 +8,10 @@ const brokenImages : Array<number> = [
 
 interface ImageSelectorProps {
     selectedImgUrl: string;
-    setSelectedImgUrl: (url: string) => void
+    setSelectedImgUrl: (selectedImgurl: string) => void
 }
 
-export function ImageSelector({selectedImgUrl, setSelectedImgUrl} : ImageSelectorProps) : JSX.Element {
+export function ImageSelector({selectedImgUrl, setSelectedImgUrl} : ImageSelectorProps) : JSX.Element[] {
 
     const urls = [];
 

@@ -4,19 +4,20 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { PhotoViewer } from './PhotoViewer/PhotoViewer'
 import { ImageSelector } from './ImageSelector/ImageSelector'
-// import { selectOneImg } from './ImageSelector/ImageSelector'
+import { RandomImgButton } from './RandomImgButton/RandomImgButton'
 
 function App(): JSX.Element {
-  const [selectedImgUrl, setSelectedImgUrl] = useState("")
+  const [selectedImgUrl, setSelectedImgUrl] = useState("https://picsum.photos/id/600/1280/900.jpg")
+  const [randomImgUrl, setRandomImgUrl] = useState("https://picsum.photos/id/600/1280/900.jpg")
 
   return (
     <div>
       <h1>React Photo Viewer</h1>
-      <PhotoViewer photoURL={"https://picsum.photos/id/600/1280/900.jpg"}/>
+      <RandomImgButton randomImgUrl={randomImgUrl} setRandomImgUrl={setRandomImgUrl}/>
+      <PhotoViewer photoURL = {randomImgUrl} />
+      {/* <PhotoViewer photoURL = {selectedImgUrl} /> */}
       <h2>Image Selector</h2>
       <ImageSelector selectedImgUrl={selectedImgUrl} setSelectedImgUrl={setSelectedImgUrl}/>
-      {/* selectedImgUrl -  in green is the property name that ImageSelector will take */}
-      {/* selectedImgUrl - white storiing the actual selected url */}
     </div>
   )
 }

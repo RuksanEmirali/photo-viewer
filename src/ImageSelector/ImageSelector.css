@@ -1,4 +1,10 @@
-.thumb-img {
+.unselected {
+    max-width: 20vw;
+    align-self: stretch;
+    margin: 0.35vw
+}
+
+.selected {
     max-width: 20vw;
     align-self: stretch;
     margin: 0.35vw
