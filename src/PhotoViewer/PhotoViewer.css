@@ -1,0 +1,8 @@
+.pic {
+    direction: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: stretch;
+}
+
+
